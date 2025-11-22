@@ -1,7 +1,10 @@
 import axios from 'axios'
 
+// Use environment variable for baseURL
+const API_BASE_URL = process.env.VUE_APP_API_URL || 'https://techg-app-backend.onrender.com/api'
+
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api',
+  baseURL: API_BASE_URL,  // Changed this line
   timeout: 10000,
 })
 
